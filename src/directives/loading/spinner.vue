@@ -1,5 +1,5 @@
 <template>
-  <div class="ej-loading " :class="[fullscreen ? 'fixed' : 'absolute']">
+  <div class="wi-loading " :class="[fullscreen ? 'fixed' : 'absolute']">
     <img src="./assets/spinner.gif" alt="">
   </div>
 </template>
@@ -17,7 +17,7 @@
 </script>
 
 <style lang="less">
-  .ej-loading {
+  .wi-loading {
     background-color: rgba(255,255,255,.75);
     z-index: 10;
     display: flex;

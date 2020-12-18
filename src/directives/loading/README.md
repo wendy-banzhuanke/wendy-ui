@@ -1,16 +1,16 @@
-## v-ej-loading 加载状态指示器
+## v-wi-loading 加载状态指示器
 
 ```html
 <!-- 覆盖元素内容区域 -->
-<div v-ej-loading="loading">...</div>
+<div v-wi-loading="loading">...</div>
 
 <!-- 覆盖全屏 -->
-<div v-ej-loading.fullscreen="loading">...</div>
+<div v-wi-loading.fullscreen="loading">...</div>
 ```
 
 ```js
 import Vue from 'vue'
-import {Loading} from '@ej/ui'
+import {Loading} from '@wendy/ui'
 
 Vue.use(Loading)
 

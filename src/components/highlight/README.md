@@ -3,7 +3,7 @@
 基于 highlight.js 实现。
 
 ```html
-<ej-highlight code="SELECT * FROM ExampleTable;" language="sql"/>
+<wi-highlight code="SELECT * FROM ExampleTable;" language="sql"/>
 ```
 
 ### Props

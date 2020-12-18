@@ -1,52 +1,52 @@
-import Vue from 'vue'
+import Vue from "vue";
 
-import SpinnerComp from './spinner.vue'
+import SpinnerComp from "./spinner.vue";
 
-const VALID_POSITION_VALS = ['absolute', 'relative', 'fixed']
+const VALID_POSITION_VALS = ["absolute", "relative", "fixed"];
 
-const Spinner = Vue.extend(SpinnerComp)
+const Spinner = Vue.extend(SpinnerComp);
 
 const directive = {
-  name: 'EjLoading',
+  name: "WiLoading",
 
   bind: (el, binding) => {
     el.instance = new Spinner({
-      el: document.createElement('div'),
+      el: document.createElement("div"),
       data: {
-        fullscreen: !!binding.modifiers.fullscreen,
-      },
-    })
+        fullscreen: !!binding.modifiers.fullscreen
+      }
+    });
 
-    const {position} = window.getComputedStyle(el)
+    const { position } = window.getComputedStyle(el);
 
     if (!VALID_POSITION_VALS.includes(position)) {
-      el.style.position = 'relative'
+      el.style.position = "relative";
     }
 
     if (binding.value) {
-      el.appendChild(el.instance.$el)
+      el.appendChild(el.instance.$el);
     }
   },
 
   update: (el, binding) => {
     if (binding.value) {
       if (el.instance.$el.parentNode === null) {
-        el.appendChild(el.instance.$el)
+        el.appendChild(el.instance.$el);
       }
     } else {
       if (el === el.instance.$el.parentNode) {
-        el.removeChild(el.instance.$el)
+        el.removeChild(el.instance.$el);
       }
     }
   },
 
-  unbind: (el) => {
-    el.instance.$destroy()
+  unbind: el => {
+    el.instance.$destroy();
     if (el === el.instance.$el.parentNode) {
-      el.removeChild(el.instance.$el)
+      el.removeChild(el.instance.$el);
     }
-    el.instance = null
-  },
-}
+    el.instance = null;
+  }
+};
 
-export default directive
+export default directive;

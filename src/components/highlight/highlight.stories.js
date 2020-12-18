@@ -23,7 +23,7 @@ values (2, 'D''artagnian');
 storiesOf("Components|Highlight", module).add("基本用法", () => ({
   template: `
       <div>
-        <ej-highlight :code="code" :language="language"/>
+        <wi-highlight :code="code" :language="language"/>
       </div>
     `,
   props: {

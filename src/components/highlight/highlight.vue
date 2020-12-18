@@ -18,7 +18,7 @@
   const LOADED_LANGS = {}
 
   export default {
-    name: 'EjHighlight',
+    name: 'WiHighlight',
 
     props: {
       code: {
